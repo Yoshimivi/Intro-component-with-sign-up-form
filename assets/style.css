@@ -1,0 +1,301 @@
+/* =============================== GENERAL =============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --lgreen: hsl(154, 72%, 62%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  height: 100vh;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: var(--red);
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 95vh;
+  margin-inline: 5rem;
+  padding-top: 5vh;
+}
+
+/* =============================== LEFT =============================== */
+
+.left {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 4rem;
+  margin-bottom: 2rem;
+}
+
+#text {
+  width: 36vw;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* =============================== RIGHT =============================== */
+
+.right {
+  width: 40%;
+  margin-left: -10rem;
+}
+
+#trial {
+  color: white;
+  font-size: 18px;
+  background-color: var(--blue);
+  border-radius: 0.8rem;
+  height: 4.6rem;
+  width: 34rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0.6rem rgba(0, 0, 0, 0.123);
+  margin-bottom: 2rem;
+}
+
+#whitebox {
+  background-color: white;
+  border-radius: 0.8rem;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0.7rem rgba(0, 0, 0, 0.123);
+}
+
+input {
+  border-radius: 0.4rem;
+  height: 3.8rem;
+  width: 29rem;
+  margin: 0.5rem 2.5rem;
+  border: 1px solid var(--grayish-blue);
+  font-size: 16px;
+  font-weight: 600;
+  font-family: poppins;
+  padding-left: 2rem;
+}
+
+input:focus {
+  border: 1px solid var(--dark-blue);
+  outline: none;
+}
+
+input#fname {
+  margin-top: 2.7rem;
+}
+
+form span p {
+  margin-inline-end: 2.7rem;
+  margin-bottom: 0.3rem;
+  font-style: italic;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  visibility: hidden;
+}
+
+form span img {
+  display: flex;
+  align-self: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  visibility: hidden;
+  margin-top: -3.2rem;
+  margin-inline-start: 29rem;
+}
+
+form span.error p {
+  position: initial;
+  visibility: initial;
+}
+
+form span.error img {
+  visibility: initial;
+}
+
+#button {
+  background-color: var(--green);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(0, 0, 0, 0.192);
+  box-shadow: 0.1rem 0.2rem rgba(0, 0, 0, 0.123);
+  padding: 0;
+}
+
+#button:hover {
+  background-color: var(--lgreen);
+}
+
+#termstxt {
+  color: var(--grayish-blue);
+  font-size: 12px;
+  margin-bottom: 3rem;
+}
+
+#terms {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* =============================== FOOTER =============================== */
+
+footer {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 99%);
+  height: 5vh;
+  width: 100%;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+/* =============================== RESPONSIVITY =============================== */
+
+@media (max-width: 375px) {
+  body {
+    height: max-content;
+    background-image: url(../images/bg-intro-mobile.png);
+    margin: auto;
+    margin-top: 14rem;
+  }
+
+  main {
+    /* margin-top: 17rem; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* =============================== LEFT =============================== */
+
+  .left {
+    width: 90vw;
+    align-self: center;
+  }
+
+  h1 {
+    width: 90vw;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  #text {
+    align-self: center;
+    width: 85vw;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  /* =============================== RIGHT =============================== */
+
+  .right {
+    width: 90vw;
+    margin: 0;
+    margin-top: 3.5rem;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #trial {
+    width: 85vw;
+    align-self: center;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  #trial p {
+    width: 70%;
+  }
+
+  #whitebox {
+    width: 85vw;
+    align-self: center;
+  }
+
+  input {
+    width: 73vw;
+  }
+
+  input#fname {
+    margin-top: 1.5rem;
+  }
+  form span p {
+    font-size: 10px;
+  }
+
+  form span img {
+    margin-inline-start: 17rem;
+  }
+
+  #button {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  #termstxt {
+    width: 60vw;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* =============================== FOOTER =============================== */
+
+  footer {
+    width: 100vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 5rem;
+    text-align: center;
+    align-self: flex-end;
+    height: 7vh;
+  }
+
+  footer p {
+    width: 60%;
+    font-size: 12px;
+  }
+}
